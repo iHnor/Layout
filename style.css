@@ -3,10 +3,13 @@
 * {
     box-sizing: border-box;
   }
+html {
+    margin: 0;    
+}
 body {
-    margin: 0;
-    color: #333333;
+    margin: 0;    
 
+    color: #333333;
 }  
 h1{
     font-family: 'Libre Franklin', sans-serif;
@@ -67,12 +70,18 @@ p{
     background: rgba(198, 108, 73, 0.4); 
     z-index: -1;
 }
+.navigation{
+    display: flex;
+    width: 100%;
+    align-items: baseline;
+}
 .navigation h1{
     font-weight: bold;
     text-align: center;
+    width: 85%;
 
-    margin: 0;
-    padding-bottom: 50px;
+    padding: 0;
+    margin-bottom: 50px;
 }
 .bg-text{
     text-align: center;
@@ -101,9 +110,6 @@ p{
     margin-bottom: 19px;
 }
 .about p{
-    font-family: 'Libre Franklin';
-    font-style: normal;
-    font-weight: normal;
     font-size: 12px;
     line-height: 15px;
     text-align: justify;
@@ -131,9 +137,6 @@ p{
     margin: 0; 
 }
 .skills p {
-    font-family: 'Libre Franklin';
-    font-style: normal;
-    font-weight: normal;
     font-size: 12px;
     line-height: 25px;
     margin: 0; 
@@ -202,16 +205,11 @@ p{
     padding-bottom: 15px;
 }
 .portfolio p {
-    margin: 0;
-    margin-bottom: 30px;
-    text-align: center;
-    font-family: 'Libre Franklin';
-    font-style: normal;
-    font-weight: normal;
     font-size: 12px;
     line-height: 15px;
     text-align: center;
-
+    margin: 0;
+    margin-bottom: 30px;
 }
 
 .portfolio-group-left .up {
@@ -240,6 +238,7 @@ p{
 }
 
 .Get-in-touch {
+    background-color: #FFFAF2;
     text-align: center;
     padding-top: 26px;
     padding-left: 42px;
@@ -270,12 +269,14 @@ footer{
     font-size: 12px;
     line-height: 15px;
     margin-top: 7px;
+    margin-bottom: 0;
 }
-/* .Get-in-touch h1{
-    display: inline;
+
+footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FFFAF2;
+    padding-bottom: 50px;
 }
-.Get-in-touch-left-bar{
-    width: 55%;
-} */
-/* .Get-in-touch-right-bar{
-} */
