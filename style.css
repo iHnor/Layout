@@ -4,13 +4,18 @@
     box-sizing: border-box;
   }
 html {
-    margin: 0;    
+    margin: 0; 
 }
 body {
     margin: 0;    
 
     color: #333333;
 }  
+/* head, footer{
+     padding-top: 36px;
+    padding-left: 34px;
+    padding-right: 34px; 
+} */
 h1{
     font-family: 'Libre Franklin', sans-serif;
     font-style: normal;
@@ -125,6 +130,9 @@ p{
     background: #FFFAF2;
     display: grid;
     justify-items: center;
+}
+.skills-body{
+    width: 100%;
 }
 .skills h1{
     text-align: center;
@@ -279,4 +287,82 @@ footer{
     justify-content: space-between;
     background-color: #FFFAF2;
     padding-bottom: 50px;
+}
+
+.navigation-bar{
+    display: none;
+}
+
+@media only screen and (min-width: 896px) {
+    h2{
+        font-size: 64px;
+        line-height: 78px;
+    }
+    p {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .navigation h1{
+        text-align: left;
+        width: 42%;
+    }
+    .navigation img{
+        display: none;
+    }
+    .navigation{
+        display: flex;
+        margin: 0;
+        padding-bottom: 140px;
+    }
+    .navigation-bar{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        width: 50%;
+
+    }
+
+    .bg {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-left: 165px;
+        padding-top: 93px;
+        height: 768px;
+    }
+    .bg::before {
+        background: rgba(198, 108, 73, 0.3); 
+    }
+    .bg-text{
+        text-align: left;
+        width: 100%;
+        margin: 0;
+    }
+    .bg-text h3 {
+        font-size: 24px;
+        line-height: 29px;
+        padding-bottom: 106px;
+    }
+
+    .about {
+        padding-top: 93px;
+        padding-left: 166px;
+        padding-right: 167px;
+    }
+    .about h1{
+        margin: 0;
+        text-align: left;
+        font-weight: bold;
+        padding-bottom: 76px;
+    }
+    .about p {
+        margin: 0;
+        font-size: 18px;
+        line-height: 30px;
+        padding-bottom: 115px;
+    }
+
+    /* Тут повинні бути змінені скіли */
+    .skills{
+        display: flex;
+    }
 }
