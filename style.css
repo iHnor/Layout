@@ -11,11 +11,15 @@ body {
 
     color: #333333;
 }  
-/* head, footer{
-     padding-top: 36px;
-    padding-left: 34px;
-    padding-right: 34px; 
-} */
+a{
+    cursor: pointer;
+    font-family: 'Libre Franklin';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    z-index: 3;
+}
 h1{
     font-family: 'Libre Franklin', sans-serif;
     font-style: normal;
@@ -132,12 +136,15 @@ p{
     justify-items: center;
 }
 .skills-body{
+    display:grid;
+    justify-content: center;
     width: 100%;
 }
 .skills h1{
     text-align: center;
 }
 .skills h3 {
+    width: 100px;
     padding-left: 0;
     font-weight: 600;
     font-size: 12px;
@@ -173,6 +180,7 @@ p{
     justify-content: space-between;
     align-items: center;
     margin-top: 0;
+    justify-content: flex-start;
 }
 .profile {
     margin-bottom: 31px;
@@ -183,7 +191,7 @@ p{
 .tools-layout, .tools-designing, .tools-real{
     margin-bottom: 18px;
 }
-.tools-layout p{
+/* .tools-layout p{
     margin-right: 31px;
 }
 .tools-designing p{
@@ -191,31 +199,37 @@ p{
 }
 .tools-real p{
     margin-right: 92px;
-}
+} */
 
 .portfolio{
     padding-top: 25px;
     padding-left: 34px;
     padding-right: 32px;
     padding-bottom: 24px;
-    display: grid;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
+   
 }
-.portfolio h1 {
+.portfolio-UXResearch{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.portfolio-UXResearch h1 {
     margin: 0;
     padding-bottom: 19px;
 }
-.portfolio h2 {
+.portfolio-UXResearch h2 {
     font-weight: 500;
     font-size: 14px;
     line-height: 25px;
     margin: 0;
     padding-bottom: 15px;
 }
-.portfolio p {
+.portfolio-UXResearch p {
+    text-align: center;
     font-size: 12px;
     line-height: 15px;
-    text-align: center;
     margin: 0;
     margin-bottom: 30px;
 }
@@ -247,49 +261,37 @@ p{
 
 .Get-in-touch {
     background-color: #FFFAF2;
-    text-align: center;
     padding-top: 26px;
     padding-left: 42px;
     padding-right: 32px;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+}
+.Get-in-touch-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .list-touch{
     display: flex;
-    text-align:left
 }
-footer{
-    padding-left: 42px;
-    padding-right: 32px;
-    
-}
-.email{
-    font-family: 'Libre Franklin';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 17px;
-    margin: 0;
-}
-.phone{
-    font-family: 'Libre Franklin';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 15px;
-    margin-top: 7px;
-    margin-bottom: 0;
-}
-
-footer{
+.info-bar{
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: space-between;
-    background-color: #FFFAF2;
-    padding-bottom: 50px;
+    align-items: center;
 }
-
+.info-bar p{
+    margin: 0;
+    margin-bottom: 7px;
+}
 .navigation-bar{
+    display: none;
+}
+.portfolio-button{
+    display: none;
+}
+.information-desktop{
     display: none;
 }
 
@@ -323,6 +325,7 @@ footer{
     }
 
     .bg {
+        z-index: 0;
         flex-direction: column;
         justify-content: flex-start;
         padding-left: 165px;
@@ -361,8 +364,149 @@ footer{
         padding-bottom: 115px;
     }
 
-    /* Тут повинні бути змінені скіли */
     .skills{
         display: flex;
+        padding-left: 165px;
+        padding-top: 93px;
+        padding-right: 165px;
+        padding-bottom: 145px;
+    }
+    .skills-head h1{
+        margin: 0;
+        text-align: left;
+        padding-bottom: 86px;
+        font-weight: bold;
+    }
+    .skills-head img{
+        width: 340px;
+        height: 350px;
+        margin-right: 125px;
+    }
+
+    .skills-body{
+        padding-top: 110px;
+    }
+    .skills h3 {
+        width: 200px;
+        font-size: 18px;
+    }
+    .skills p {
+        /* width: 100%; */
+        font-size: 20px;
+    }
+    .graph {
+        display: block;
+        /* width: 446px; */
+        width: 70%;
+        height: 24px;
+       
+    }
+    .graph > div {
+        height: 24px;
+    }
+    .profile {
+        margin-bottom: 60px;
+    }
+    .frontEnd, .ui-Design, .ui-Research, .tools-layout, .tools-designing, .tools-real {
+        margin-bottom: 20px;
+    }
+
+    .portfolio{
+        flex-direction: row;
+        padding-left: 165px;
+        padding-top: 93px;
+        padding-right: 165px;
+        padding-bottom: 145px;
+    }
+    .photo{
+        display: flex;
+        width: 450px;
+        padding-top: 160px;
+    }
+    .portfolio-UXResearch{
+        align-items: flex-start;
+        width: 474px;
+        padding-right: 125px;
+
+    }
+    .portfolio-UXResearch h1{
+        align-items: flex-start;
+        padding-bottom: 86px;
+    }
+    .portfolio-UXResearch h2{
+        font-weight: 600;
+        font-size: 18px;
+    }
+    .portfolio-UXResearch p{
+        width: 349px;
+        font-size: 18px;
+        line-height: 30px;
+        padding-bottom: 235px;
+        margin: 0;
+        text-align: left;
+    }
+    .portfolio-group-right{
+        padding-left: 0;
+    }
+    .portfolio-group-left{
+        margin-right: 30px;
+    }
+    .portfolio-group-left .up {
+        width: 350px;
+        height: 144px;
+    }
+    .portfolio-group-left .down {
+        width: 349px;
+        height: 233px;
+        padding-top: 20px;
+    }
+    .portfolio-group-right .up {
+        width: 255px;
+        height: 233px;
+    }
+    .portfolio-group-right .down {
+        width: 255px;
+        height: 144px;
+        padding-top: 18px;
+    }
+    .portfolio-button{
+        display: flex;
+    }
+    .portfolio-button .left{
+        margin-right: 20px;
+    }
+
+    .Get-in-touch{
+        padding-left: 165px;
+        padding-top: 93px;
+        padding-right: 180px;
+    }
+    .Get-in-touch-header{
+        align-items: flex-start;
+        font-weight: bold;
+    }
+    .Get-in-touch-header h1{
+        margin: 0;
+        padding-bottom: 51px;
+    }
+    .information-desktop{
+        display:grid;
+        height: 40px;
+    }
+    .information-desktop p {
+        margin: 0;
+    }
+    .information-desktop .email {
+        margin-bottom: 8px;
+        padding-right: 143px;
+    }
+    .information-mobile{
+        display: none;
+    }
+    .list-touch{
+        flex-direction: row;
+    }
+    .info-bar{
+        justify-content: flex-end;
     }
 }
